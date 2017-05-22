@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://xml.login.com/loginResponse"
+    targetNamespace= "http://xml.login.com/loginResponse"
+    elementFormDefault="qualified">
+    
+    <xsd:element name="loginResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+
+                <xsd:element name="status" minOccurs="1" maxOccurs="1">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:boolean">
+                            <xsd:annotation>
+                                <xsd:documentation>Indicador usuario autorizado o no</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://xml.login.com/loginRequest"
+    targetNamespace="http://xml.login.com/loginRequest"
+    elementFormDefault="qualified">
+    
+    <xsd:element name="loginRequest">
+        <xsd:complexType>
+            <xsd:sequence> 
+                
+                <xsd:element name="user" minOccurs="1" maxOccurs="1">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:annotation>
+                                <xsd:documentation>Ususario que intenta ingresar</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+
+                <xsd:element name="password" minOccurs="1" maxOccurs="1">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string">
+                            <xsd:annotation>
+                                <xsd:documentation>Password del usuario que intenta inrgesar</xsd:documentation>
+                            </xsd:annotation>
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
