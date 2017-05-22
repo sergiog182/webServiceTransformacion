@@ -4,38 +4,38 @@
                   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                   xmlns:tns="http://xml.transformacion.com/transformacion" 
                   targetNamespace="http://xml.transformacion.com/transformacion" 
-                  xmlns:transformacionIn ="http://xml.transformacion.com/transformacionRequest"
-                  xmlns:transformacionOut ="http://xml.transformacion.com/transformacionResponse"
+                  xmlns:getTransformacionIn ="http://xml.transformacion.com/getTransformacionRequest"
+                  xmlns:getTransformacionOut ="http://xml.transformacion.com/getTransformacionResponse"
 >
     <wsdl:types>
         
         <xsd:schema name="http://xml.transformacion.com/transformacion">
-            <xsd:import namespace="http://xml.transformacion.com/transformacionRequest" schemaLocation="http://localhost/webServiceTransformacion/contracts/xsd/transformacionRequest.xsd" />
-            <xsd:import namespace="http://xml.transformacion.com/transformacionResponse" schemaLocation="http://localhost/webServiceTransformacion/contracts/xsd/transformacionResponse.xsd" />
+            <xsd:import namespace="http://xml.transformacion.com/getTransformacionRequest" schemaLocation="http://localhost/webServiceTransformacion/contracts/xsd/getTransformacionRequest.xsd" />
+            <xsd:import namespace="http://xml.transformacion.com/getTransformacionResponse" schemaLocation="http://localhost/webServiceTransformacion/contracts/xsd/getTransformacionResponse.xsd" />
         </xsd:schema>
         
     </wsdl:types>
         
     
-    <wsdl:message name="transformacionRequest">
-        <wsdl:part name="in" element="transformacionIn:transformacionRequest" />
+    <wsdl:message name="getTransformacionRequest">
+        <wsdl:part name="in" element="getTransformacionIn:getTransformacionRequest" />
     </wsdl:message>
-    <wsdl:message name="transformacionResponse">
-        <wsdl:part name="out" element="transformacionOut:transformacionResponse" />
+    <wsdl:message name="getTransformacionResponse">
+        <wsdl:part name="out" element="getTransformacionOut:getTransformacionResponse" />
     </wsdl:message>
     
-    <wsdl:portType name="transformacion">
-        <wsdl:operation name="transformacion">
-            <wsdl:input message="tns:transformacionRequest" />
-            <wsdl:output message="tns:transformacionResponse" />
+    <wsdl:portType name="getTransformacion">
+        <wsdl:operation name="getTransformacion">
+            <wsdl:input message="tns:getTransformacionRequest" />
+            <wsdl:output message="tns:getTransformacionResponse" />
         </wsdl:operation>
     </wsdl:portType>    
     
-    <wsdl:binding name="transformacionSoap" type="tns:transformacion">
+    <wsdl:binding name="transformacionSoap" type="tns:getTransformacion">
         <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
         
-        <wsdl:operation name="transformacion">
-            <soap:operation soapAction="http://xml.transformacion.com/transformacion"/>
+        <wsdl:operation name="getTransformacion">
+            <soap:operation soapAction="http://xml.transformacion.com/getTransformacion"/>
             <wsdl:input>
                 <soap:body use="literal"/>
             </wsdl:input>
