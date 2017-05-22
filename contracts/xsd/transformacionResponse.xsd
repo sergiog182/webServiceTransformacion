@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema 
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns="http://xml.login.com/loginResponse"
-    targetNamespace= "http://xml.login.com/loginResponse"
+    xmlns="http://xml.transformacion.com/transformacionResponse"
+    targetNamespace= "http://xml.transformacion.com/transformacionResponse"
     elementFormDefault="qualified">
     
-    <xsd:element name="loginResponse">
+    <xsd:element name="transformacionResponse">
         <xsd:complexType>
             <xsd:sequence>
 

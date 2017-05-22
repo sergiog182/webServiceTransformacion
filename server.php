@@ -12,7 +12,7 @@
 	require_once 'interfaceLogin.php';
 
 	try {
-	    $server = new soapServer('contracts/wsdl/login.wsdl',array('compression' => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP));
+	    $server = new soapServer('contracts/wsdl/transformacion.wsdl',array('compression' => SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP));
 	    $server->setClass('servicesExposed');
 	    $server->handle();
 	} catch (SOAPFault $f) {

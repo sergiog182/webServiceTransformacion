@@ -1,5 +1,5 @@
 <?php
-	class business_Login
+	class business_transformacion
 	{
 		/*
 		* Valida si un usuario es autorizado o no
@@ -8,7 +8,7 @@
 		* return $out
 		* $out->status boolean indica si el usuario es autorizado
 		*/
-		public function login($in) {
+		public function getTransformacion($in) {
 			$out = new stdClass();
 			try {
 				if (empty($in->user) || empty($in->password)) {

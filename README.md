@@ -1,1 +1,1 @@
-Web service que garantiza el ingreso de un usuario a la plataforma de pago de servicios
+Web service para transformar datos y comunicarze con los sistemas externos al banco
