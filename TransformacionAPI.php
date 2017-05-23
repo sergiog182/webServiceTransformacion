@@ -54,12 +54,12 @@
 							$retorno["method"] = "Cosultar";
 	    					break;
 	    				case 'pagar':
-	    					$retorno["payload"] = '{"referenciaFactura": ' . $factura . ', "totalPagar": ' . $valor . '}';
+	    					$retorno["payload"] = '{"referenciaFactura":  {"referenciaFactura": ' . $factura . '}, "totalPagar": ' . $valor . '}';
 							$retorno["error"] = "";
 							$retorno["method"] = "Pagar";
 	    					break;
     					case 'compensar':
-	    					$retorno["payload"] = '{"referenciaFactura": ' . $factura . ', "totalPagar": ' . $valor . '}';
+	    					$retorno["payload"] = '{"referenciaFactura":  {"referenciaFactura": ' . $factura . '}, "totalPagar": ' . $valor . '}';
 							$retorno["error"] = "";
 							$retorno["method"] = "Compensar";
 	    					break;
