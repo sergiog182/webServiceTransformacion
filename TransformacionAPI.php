@@ -20,6 +20,9 @@
 	    	$retorno = array();
 	    	switch ($servicio) {
 	    		case 'luz':
+	    		case 'telefono':
+	    		case 'celular':
+	    		case 'gas':
 	    			$retorno['url'] = "/servicios/pagos/v1/payments/" . $factura;
 	    			switch ($metodo) {
 	    				case 'consultar':
