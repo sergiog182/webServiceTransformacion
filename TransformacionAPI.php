@@ -48,42 +48,15 @@
 	    			$retorno["url"] = "";
 	    			switch ($metodo) {
 	    				case 'consultar':
-	    					$retorno["payload"] = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://www.servicios.co/pagos/schemas">
-													   	<soapenv:Header/>
-													   	<soapenv:Body>
-													      	<sch:ReferenciaFactura>
-													         	<sch:referenciaFactura>' . $factura . '</sch:referenciaFactura>
-													      	</sch:ReferenciaFactura>
-													   	</soapenv:Body>
-													</soapenv:Envelope>';
+	    					$retorno["payload"] = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://www.servicios.co/pagos/schemas"><soapenv:Header/><soapenv:Body><sch:ReferenciaFactura><sch:referenciaFactura>' . $factura . '</sch:referenciaFactura></sch:ReferenciaFactura></soapenv:Body></soapenv:Envelope>';
 							$retorno["error"] = "";
 	    					break;
 	    				case 'pagar':
-	    					$retorno["payload"] = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://www.servicios.co/pagos/schemas">
-													   	<soapenv:Header/>
-													   	<soapenv:Body>
-													      	<sch:Pago>
-													         	<sch:referenciaFactura>
-													            	<sch:referenciaFactura>' . $factura . '</sch:referenciaFactura>
-													         	</sch:referenciaFactura>
-													         	<sch:totalPagar>' . $valor . '</sch:totalPagar>
-													      	</sch:Pago>
-													   	</soapenv:Body>
-													</soapenv:Envelope>';
+	    					$retorno["payload"] = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://www.servicios.co/pagos/schemas"><soapenv:Header/><soapenv:Body><sch:Pago><sch:referenciaFactura><sch:referenciaFactura>' . $factura . '</sch:referenciaFactura></sch:referenciaFactura><sch:totalPagar>' . $valor . '</sch:totalPagar></sch:Pago></soapenv:Body></soapenv:Envelope>';
 							$retorno["error"] = "";
 	    					break;
     					case 'compensar':
-	    					$retorno["payload"] = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://www.servicios.co/pagos/schemas">
-													   	<soapenv:Header/>
-													   	<soapenv:Body>
-													      	<sch:Pago>
-													         	<sch:referenciaFactura>
-													            	<sch:referenciaFactura>' . $factura . '</sch:referenciaFactura>
-													         	</sch:referenciaFactura>
-													         	<sch:totalPagar>' . $valor . '</sch:totalPagar>
-													      	</sch:Pago>
-													   	</soapenv:Body>
-													</soapenv:Envelope>';
+	    					$retorno["payload"] = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://www.servicios.co/pagos/schemas"><soapenv:Header/><soapenv:Body><sch:Pago><sch:referenciaFactura><sch:referenciaFactura>' . $factura . '</sch:referenciaFactura></sch:referenciaFactura><sch:totalPagar>' . $valor . '</sch:totalPagar></sch:Pago></soapenv:Body></soapenv:Envelope>';
 							$retorno["error"] = "";
 	    					break;
 	    				default:
