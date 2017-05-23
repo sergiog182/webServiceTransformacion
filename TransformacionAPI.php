@@ -48,21 +48,24 @@
 	    				case 'consultar':
 	    					$retorno["payload"] = '{"referenciaFactura": ' . $factura . '}';
 							$retorno["error"] = "";
+							$retorno["method"] = "Cosultar";
 	    					break;
 	    				case 'pagar':
 	    					$retorno["payload"] = '{"referenciaFactura": ' . $factura . ', "totalPagar": ' . $valor . '}';
 							$retorno["error"] = "";
+							$retorno["method"] = "Pagar";
 	    					break;
     					case 'compensar':
 	    					$retorno["payload"] = '{"referenciaFactura": ' . $factura . ', "totalPagar": ' . $valor . '}';
 							$retorno["error"] = "";
+							$retorno["method"] = "Compensar";
 	    					break;
 	    				default:
+	    					$retorno["method"] = "";
 	    					$retorno["payload"] = "";
 	    					$retorno["error"] = "No se encontro transformacion";
 	    					break;
 	    			}
-	    			$retorno["method"] = "";
 	    			break;
 	    		default:
 	    			$retorno["method"] = "";
