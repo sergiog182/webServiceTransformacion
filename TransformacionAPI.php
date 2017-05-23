@@ -17,7 +17,6 @@
 
 	    public function transformacion($metodo, $servicio, $factura, $valor = 0)
 	    {
-	    	echo $metodo . " <-> " . $servicio . " <-> " . $factura . " <-> " . $valor . "<br>";
 	    	$retorno = array();
 	    	switch ($servicio) {
 	    		case 'luz':
