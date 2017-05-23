@@ -22,7 +22,7 @@
 	    	$retorno = array();
 	    	switch ($servicio) {
 	    		case 'luz':
-	    			$retorno['url'] = "\/servicios\/pagos\/v1\/payments\/" . $factura;
+	    			$retorno['url'] = "/servicios/pagos/v1/payments/" . $factura;
 	    			switch ($metodo) {
 	    				case 'consultar':
 	    					$retorno["method"] = "GET";
