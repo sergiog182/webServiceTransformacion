@@ -9,7 +9,7 @@
 	        	$metodo = $_GET['metodo'];
 	        	$servicio = $_GET['servicio'];
 	        	$factura = $_GET['factura'];
-	        	$valor = $_GET['valor'];
+	        	$valor = ($_GET['valor'] ? $_GET['valor'] : 0);
 	        	$respuesta = $this->transformacion($medoto, $servicio, $factura);
 	        } else {
 	        	$respuesta["error"] = "No se encontro transformacion";
@@ -19,6 +19,7 @@
 
 	    public function transformacion($metodo, $servicio, $factura, $valor = 0)
 	    {
+	    	echo $metodo . " <-> " . $servicio . " <-> " . $factura . " <-> " . $valor . "<br>";
 	    	$retorno = array();
 	    	switch ($servicio) {
 	    		case 'luz':
