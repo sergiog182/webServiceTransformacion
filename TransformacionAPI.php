@@ -1,6 +1,6 @@
 <?php
 	class TransformacionAPI {    
-	    public function getTansformacion(){
+	    public function getTransformacion(){
 	        header('Content-Type: application/JSON');                
 	        $method = $_SERVER['REQUEST_METHOD'];
 	        $respuesta = array();
