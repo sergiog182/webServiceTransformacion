@@ -2,6 +2,7 @@
 	class TransformacionAPI {    
 	    public function getTransformacion(){
 	        header('Content-Type: application/JSON');                
+	        echo "<pre>" . var_export($_SERVER, true) . "</pre>";
 	        $method = $_SERVER['REQUEST_METHOD'];
 	        $respuesta = array();
 	        if ($_GET['metodo'] != "" && $_GET['servicio'] != "" && $_GET['factura'] != "") {
@@ -9,6 +10,7 @@
 	        	$servicio = $_GET['servicio'];
 	        	$factura = $_GET['factura'];
 	        	$valor = ($_GET['valor'] ? $_GET['valor'] : 0);
+	        	echo $valor;
 	        	$respuesta = $this->transformacion($metodo, $servicio, $factura);
 	        } else {
 	        	$respuesta["error"] = "No se encontro transformacion";
