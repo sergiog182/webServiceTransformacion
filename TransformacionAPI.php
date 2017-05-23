@@ -11,7 +11,7 @@
 	        	$factura = $_GET['factura'];
 	        	$valor = ($_GET['valor'] ? $_GET['valor'] : 0);
 	        	echo $valor;
-	        	$respuesta = $this->transformacion($metodo, $servicio, $factura);
+	        	$respuesta = $this->transformacion($metodo, $servicio, $factura, $valor);
 	        } else {
 	        	$respuesta["error"] = "No se encontro transformacion";
 	        }
